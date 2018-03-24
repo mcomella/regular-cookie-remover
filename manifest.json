@@ -3,7 +3,7 @@
     "name": "Regular Cookie Remover",
     "version": "0.0.1",
 
-    "description": "Remove your cookies on a regular basis!",
+    "description": "Remove your cookies and trackable browsing data on a regular basis! This removes cookies on startup, one week after the last time they were removed",
 
     "background": {
         "scripts": ["src/main.js"]
