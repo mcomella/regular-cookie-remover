@@ -5,4 +5,4 @@ mkdir out/
 
 zip -r -FS out/bundle.xpi * \
     -x build.sh \
--x out/
+    -x out/
