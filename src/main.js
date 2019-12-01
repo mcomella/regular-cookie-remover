@@ -22,9 +22,9 @@ function setDeletionTimeIfNotSet() {
     });
 }
 
-function setNewDeletionDuration() {
+function setNewDeletionDuration(days = 7) {
     let nextDeletion = new Date();
-    nextDeletion.setDate(nextDeletion.getDate() + 7); // TODO: user configurable.
+    nextDeletion.setDate(nextDeletion.getDate() + days); // TODO: user configurable.
 
     let setArgs = {};
     setArgs[KEY_DELETION_TIME] = nextDeletion;
@@ -75,3 +75,13 @@ function onStartup() {
 }
 
 onStartup();
+
+browser.runtime.onMessage.addListener(setCustomTime);
+
+function setCustomTime(message){
+    days = Number(message.value)
+    //Check for integer, positive value and setting a max limit.
+    if(((days%1) === 0) && (days > 0) && (days <=365)){
+        setNewDeletionDuration(days)
+    }
+}

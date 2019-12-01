@@ -9,7 +9,14 @@
         "scripts": ["src/main.js"]
     },
 
+    "browser_action":{
+        "default_icon": "icons/cookie.jpg",
+        "default_title": "Regular Cookie Remover",
+        "default_popup": "popup/set_duration.html"
+    },
+
     "permissions": [
+        "activeTab",
         "browsingData",
         "notifications",
         "storage"
