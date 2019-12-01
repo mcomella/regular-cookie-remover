@@ -11,8 +11,8 @@ This Addon removes your cookie, cache and other trackable browsing data stored i
 
 ## How it works
 This addon contains a background script which is loaded the same time this addon is enabled/loaded untill the addon is disabled.
-On start of the browser, the time of deleting is retrieved from local storage if available, otherwise it set deletion_date to the date which is after 7 days from the current date.
-After which it checks for whether the deletion time is passed, and if yes it removes the all the data mentioned above and set a new deletion time.
+On start of the browser, the time of deleting is retrieved from local storage if available, otherwise it set deletion time to the date which is after 7 days from the current date.
+After which it checks for whether the deletion time is passed, and if yes it removes all the data mentioned above and set a new deletion time.
 Otherwise as soon as the time is passed, while browser window is open, it notifys the user that the data will be deleted next time the browser is restarted.
 
 ## Permissions Required
