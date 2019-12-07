@@ -3,17 +3,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <script>
-        function listenForClicks() {
-          input = document.querySelector('#input')
-          browser.runtime.sendMessage({'value': input.value})
-          window.close()
-      }
-      </script>
   </head>
 <body>
   <div id="popup-content">
-    <input type="text" id="input"> <button onclick="listenForClicks()">Set Duration(Days)</div> 
+    <input type="text" id="input"> <button class="btn">Set Duration(Days)</button> 
   </div>
+  <script src="set_duration.js"></script>
 </body>
 </html>
